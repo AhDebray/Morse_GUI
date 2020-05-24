@@ -24,15 +24,15 @@ def Mcode():
         else:
             for i in mtext:
                 for j in code[i.lower()]:
-                    if j == '-':
-                        dash()
-                        mlabel = Label(win, text = j).pack()
-                    elif j == '.':
+                    if j == '.':
                         dot()
                         mlabel = Label(win, text = j).pack()
+                    elif j == '-':
+                        dash()
+                        mlabel = Label(win, text = j).pack()
                     else:
-                        time.sleep(0.5)
-                time.sleep(0.5)
+                        time.sleep(0.3)
+                time.sleep(0.6)
                 
     except KeyboardInterrupt:
         GPIO.cleanup()
